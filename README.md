@@ -31,7 +31,7 @@ public class Person{
     private Integer age;
 
     public String getName(){
-        return this.Name;
+        return this.name;
     }
 
     public void setName(String name){
@@ -39,7 +39,7 @@ public class Person{
     }
 
     public Integer getAge(){
-        return this.Age;
+        return this.age;
     }
 
     public void setAge(Integer age){
