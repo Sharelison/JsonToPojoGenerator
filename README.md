@@ -25,9 +25,13 @@ Java class result for: Person
 
 package com.example;
 
-public class Person{
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Person {
+
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("age")
     private Integer age;
 
     public String getName(){
@@ -59,13 +63,17 @@ Java class result for: Person
 
 package com.example;
 
-public class Person{
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Person {
+
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("age")
     private Integer age;
 
     public String getName(){
-        return this.Name;
+        return this.name;
     }
 
     public void setName(String name){
@@ -73,7 +81,7 @@ public class Person{
     }
 
     public Integer getAge(){
-        return this.Age;
+        return this.age;
     }
 
     public void setAge(Integer age){

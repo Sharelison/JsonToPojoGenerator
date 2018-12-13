@@ -26,7 +26,7 @@ public class JsonToPojoApp {
                                       argumentsHandler.getArgument(Argument.PACKAGE))
                           .forEach(System.out::println);
             }
-            System.out.println("Processed JSON Schema\n");
+            System.out.println("\nProcessed JSON Schema\n");
         } catch (ParseException e) {
             System.out.println(e.getMessage());
             System.out.println();
