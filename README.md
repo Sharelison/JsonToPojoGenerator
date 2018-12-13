@@ -49,6 +49,40 @@ public class Person{
 }
 ```
 
+Example with JSON file with contents: { "name": "eddy", "age": 12 } :
+```
+java -jar jsontopojogenerator.jar  -C Person -P com.example -J myjsonfile.json
+
+OUTPUT:
+
+Java class result for: Person
+
+package com.example;
+
+public class Person{
+
+    private String name;
+    private Integer age;
+
+    public String getName(){
+        return this.Name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public Integer getAge(){
+        return this.Age;
+    }
+
+    public void setAge(Integer age){
+        this.age = age;
+    }
+
+}
+```
+
 Save to .java file:
 
 ```
