@@ -1,9 +1,9 @@
-package org.edds.opensource;
+package io.github.sharelison.jsontopojogenerator;
 
-import org.edds.opensource.arguments.Argument;
-import org.edds.opensource.arguments.ArgumentsHandler;
-import org.edds.opensource.jsontojava.JsonToJava;
-import org.edds.opensource.jsontojava.exception.JsonToJavaException;
+import io.github.sharelison.jsontopojogenerator.arguments.Argument;
+import io.github.sharelison.jsontopojogenerator.arguments.ArgumentsHandler;
+import io.github.sharelison.jsontojava.JsonToJava;
+import io.github.sharelison.jsontojava.exception.JsonToJavaException;
 import org.apache.commons.cli.ParseException;
 
 public class JsonToPojoApp {

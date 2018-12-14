@@ -1,4 +1,4 @@
-package org.edds.opensource.arguments;
+package io.github.sharelison.jsontopojogenerator.arguments;
 
 public enum Argument {
 
