@@ -1,4 +1,4 @@
-package com.edds.opensource.arguments;
+package org.edds.opensource.arguments;
 
 public enum Argument {
 

@@ -1,9 +1,9 @@
-package com.edds.opensource;
+package org.edds.opensource;
 
-import com.edds.opensource.arguments.Argument;
-import com.edds.opensource.arguments.ArgumentsHandler;
-import com.edds.opensource.jsontojava.JsonToJava;
-import com.edds.opensource.jsontojava.exception.JsonToJavaException;
+import org.edds.opensource.arguments.Argument;
+import org.edds.opensource.arguments.ArgumentsHandler;
+import org.edds.opensource.jsontojava.JsonToJava;
+import org.edds.opensource.jsontojava.exception.JsonToJavaException;
 import org.apache.commons.cli.ParseException;
 
 public class JsonToPojoApp {
