@@ -15,15 +15,18 @@ public class JsonToPojoApp {
             ArgumentsHandler argumentsHandler = new ArgumentsHandler(args);
             JsonToJava jsonToJava = new JsonToJava();
             System.out.println("Processing JSON Schema\n");
+            boolean withAnnotations = withAnnotations(argumentsHandler);
             if(argumentsHandler.hasArgument(Argument.OUTPUT_DIR)) {
                 jsonToJava.jsonToJava(argumentsHandler.getArgument(Argument.JSON),
                                       argumentsHandler.getArgument(Argument.CLASS_NAME),
                                       argumentsHandler.getArgument(Argument.PACKAGE),
-                                      argumentsHandler.getArgument(Argument.OUTPUT_DIR));
+                                      argumentsHandler.getArgument(Argument.OUTPUT_DIR),
+                                      withAnnotations);
             } else {
                 jsonToJava.jsonToJava(argumentsHandler.getArgument(Argument.JSON),
                                       argumentsHandler.getArgument(Argument.CLASS_NAME),
-                                      argumentsHandler.getArgument(Argument.PACKAGE))
+                                      argumentsHandler.getArgument(Argument.PACKAGE),
+                                      withAnnotations)
                           .forEach(System.out::println);
             }
             System.out.println("\nProcessed JSON Schema\n");
@@ -33,6 +36,23 @@ public class JsonToPojoApp {
             ArgumentsHandler.help(APPLICATION_NAME);
         } catch(JsonToJavaException e) {
             System.out.println("Error while processing JSON : " + e.getMessage());
+        } catch (RuntimeException e) {
+            System.out.println("Unexpected error " + e.getMessage());
         }
+    }
+
+    private static boolean withAnnotations(ArgumentsHandler argumentsHandler) {
+        boolean withAnnotations = true;
+
+        if(argumentsHandler.hasArgument(Argument.WITH_ANNOTATIONS)) {
+            try {
+                withAnnotations = Boolean.valueOf(argumentsHandler.getArgument(Argument.WITH_ANNOTATIONS));
+            } catch (RuntimeException exception) {
+                System.out.println("Unexpected argument for --with-annotations default value true will be used");
+            }
+
+        }
+
+        return withAnnotations;
     }
 }

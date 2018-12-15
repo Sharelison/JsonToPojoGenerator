@@ -5,7 +5,8 @@ public enum Argument {
     JSON("J", "json", true, "A json string or path to a json file(.txt or .json)"),
     OUTPUT_DIR("O", "output-dir", false, "Output directry for generated .java files"),
     CLASS_NAME("C", "class-name", true, "Class name of generated class"),
-    PACKAGE("P", "package", true, "Java package for generated classes");
+    PACKAGE("P", "package", true, "Java package for generated classes"),
+    WITH_ANNOTATIONS("A", "with-annotations", false, "true or false | Annotate field properties in generated classes (true by default)");
 
     private String name;
     private String longName;

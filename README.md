@@ -10,7 +10,6 @@ Tool written in Java to generate Java POJO's.
 ### Prerequisites
 
   - Java 1.8 or higher 
-  - [JsonToJava](https://github.com/Sharelison/JsonToJava) dependency
 
 ### Usage
 
@@ -110,3 +109,6 @@ A new file will be created: output/Person.java
 
 * **Sharelison** - [Sharelison](https://github.com/Sharelison)
 
+## Uses
+
+*   [JsonToJava](https://github.com/Sharelison/JsonToJava) dependency
